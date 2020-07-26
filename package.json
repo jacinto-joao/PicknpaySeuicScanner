@@ -1,0 +1,17 @@
+{
+  "name": "seuic-plugin-scanner",
+  "version": "1.0.0",
+  "description": "Picknpay cordova seuic native scanner plugin",
+  "cordova": {
+    "id": "seuic-plugin-scanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Jacinto Joao",
+  "license": "ISC"
+}

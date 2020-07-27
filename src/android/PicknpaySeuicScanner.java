@@ -35,31 +35,40 @@ public class PicknpaySeuicScanner extends CordovaPlugin {
 	public boolean execute(String action, CordovaArgs args,
 			CallbackContext callbackContext) throws JSONException {
 
-		initScanner();
+		this.initScanner();
 
 		if(action.equals("startScan")){
-			startScan();
+			this.startScan();
+			return true;
 		}else if(action.equals("stopScan")){
-			stopScan();
+			this.stopScan();
+			return true;
 		}else if(action.equals("closeScanner")){
-			closeScanner();
+			this.closeScanner();
+			return true;
 		}else if(action.equals("openScanner")){
-			openScanner();
+			this.openScanner();
+			return true;
 		}else if(action.equals("setDecodeCallback")){
-			setDecodeCallback(callbackContext);
+			this.setDecodeCallback(callbackContext);
+			return true;
 		}
 
-		return true;
+		return false;
 	}
 
 	private void startScan(){
-		cordova.getThreadPool().execute(new Runnable() {
+		try {
+			cordova.getThreadPool().execute(new Runnable() {
 
 			@Override
 			public void run() {
 				mScanner.startScan();
 			}
 		});
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
 	}
 
 	private void stopScan(){
@@ -125,21 +134,7 @@ public class PicknpaySeuicScanner extends CordovaPlugin {
 			mCallbackContext.sendPluginResult(result);
 		}
 
-    }
-
-    /**
-     * Old medthods
-     */
-
-    // @Override
-    // public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-    //     if (action.equals("coolMethod")) {
-    //         String message = args.getString(0);
-    //         this.coolMethod(message, callbackContext);
-    //         return true;
-    //     }
-    //     return false;
-    // }
+	}
 
     private void coolMethod(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {

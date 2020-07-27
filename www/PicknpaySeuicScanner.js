@@ -1,21 +1,20 @@
-var exec = require('cordova/exec');
+var exec = require("cordova/exec");
 
-exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'PicknpaySeuicScanner', 'coolMethod', [arg0]);
+module.exports.coolMethod = function (arg0, success, error) {
+  exec(success, error, "PicknpaySeuicScanner", "coolMethod", [arg0]);
 };
 
-
-exports.openScanner = function () {
-    exec(null, null, "PicknpaySeuicScanner", "openScanner", []);
+module.exports.openScanner = function (arg0, success, error) {
+  exec(success, error, "PicknpaySeuicScanner", "openScanner", [arg0]);
 };
 
-exports.closeScanner = function () {
-    exec(null, null, "PicknpaySeuicScanner", "closeScanner", []);
+module.exports.closeScanner = function (arg0, success, error) {
+  exec(success, error, "PicknpaySeuicScanner", "closeScanner", [arg0]);
 };
 
-exports.startScan = function () {
-    exec(null, null, "PicknpaySeuicScanner", "startScan", []);
+module.exports.startScan = function (arg0, success, error) {
+  exec(success, error, "PicknpaySeuicScanner", "startScan", [arg0]);
 };
-exports.setDecodeCallback = function () {
-    exec(null, null, "PicknpaySeuicScanner", "setDecodeCallback", []);
+module.exports.setDecodeCallback = function (arg0, success, error) {
+  exec(success, error, "PicknpaySeuicScanner", "setDecodeCallback", [arg0]);
 };

@@ -64,6 +64,7 @@ public class PicknpaySeuicScanner extends CordovaPlugin {
 			@Override
 			public void run() {
 				mScanner.startScan();
+				mScanner.setParams(0x104, 1);
 			}
 		});
 		} catch (Exception e) {

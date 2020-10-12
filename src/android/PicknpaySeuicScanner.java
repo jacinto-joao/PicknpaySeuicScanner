@@ -64,7 +64,59 @@ public class PicknpaySeuicScanner extends CordovaPlugin {
 			@Override
 			public void run() {
 				mScanner.startScan();
-				mScanner.setParams(0x104, 1);
+				
+				mScanner.setParams(0x101, 0);
+				mScanner.setParams(0x102, 0);
+				mScanner.setParams(0x103, 0);
+				mScanner.setParams(0x104, 0);
+				mScanner.setParams(0x105, 1);
+				mScanner.setParams(0x106, 0);
+				mScanner.setParams(0x107, 0);
+				mScanner.setParams(0x108, 0);
+				mScanner.setParams(0x109, 0);
+				mScanner.setParams(0x10a, 1);
+				mScanner.setParams(0x10b, 1);
+				mScanner.setParams(0x10c, 0);
+				mScanner.setParams(0x10d, 0);
+				mScanner.setParams(0x10e, 0);
+				mScanner.setParams(0x10f, 0);
+
+				mScanner.setParams(0x110, 0);
+				mScanner.setParams(0x111, 1);
+				mScanner.setParams(0x112, 0);
+				mScanner.setParams(0x113, 0);
+				mScanner.setParams(0x114, 0);
+				mScanner.setParams(0x115, 0);
+
+				mScanner.setParams(0x116, 0);
+				mScanner.setParams(0x117, 0);
+				mScanner.setParams(0x118, 1);
+				mScanner.setParams(0x119, 0);
+
+				mScanner.setParams(0x11a, 0);
+				mScanner.setParams(0x11b, 0);
+
+				mScanner.setParams(0x121, 0);
+				mScanner.setParams(0x122, 0);
+				mScanner.setParams(0x123, 0);
+				mScanner.setParams(0x124, 0);
+				mScanner.setParams(0x125, 0);
+				mScanner.setParams(0x126, 0);
+
+
+				mScanner.setParams(0x131, 0);
+				mScanner.setParams(0x132, 0);
+				mScanner.setParams(0x133, 0);
+				mScanner.setParams(0x134, 0);
+				mScanner.setParams(0x135, 0);
+				mScanner.setParams(0x136, 0);
+				mScanner.setParams(0x137, 0);
+				mScanner.setParams(0x138, 0);
+				mScanner.setParams(0x139, 0);
+
+
+				mScanner.setParams(0x13a, 0);
+				mScanner.setParams(0x13b, 0);
 			}
 		});
 		} catch (Exception e) {
